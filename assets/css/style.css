@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+/** Rest config **/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+}
+
+
+/** Variable **/
+
+:root {
+    --primary-color: 101, 223, 201;
+    --secondary-color: 108, 219, 235;
+    --glass-color: 255, 255, 255;
+    --circle-color: 255, 255, 255;
+    --title-color: 7, 138, 143;
+    --text-color: 8, 153, 167;
+    --box-shadow: 0 20px 50px rgba(0, 79, 144, 0.1);
+}
+
+h1,
+h2 {
+    font-weight: 500;
+    color: rgba(var(--title-color), 0.6);
+}
+
+p {
+    font-size: 1.2rem;
+    color: rgba(var(--text-color), .5);
+}
+
+h3 {
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: rgba(var(--title-color), .6);
+}
+
+main {
+    min-height: 100vh;
+    background: linear-gradient(to right top, rgb(var(--primary-color)), rgb(var(--secondary-color)));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.glass {
+    background: white;
+    min-height: 80vh;
+    width: 1440px;
+    display: flex;
+    background: linear-gradient(to right bottom, rgba(var(--glass-color), .7), rgba(var(--glass-color), .3));
+    border-radius: 1rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    box-shadow: var(--box-shadow);
+}
+
+.circle1,
+.circle2 {
+    position: absolute;
+    border-radius: 50%;
+    height: 20rem;
+    width: 20rem;
+    background: white;
+    background: linear-gradient(to right bottom, rgba(var(--circle-color), .6), rgba(var(--circle-color), .1));
+    z-index: -1;
+}
+
+.circle1 {
+    bottom: -10%;
+    left: -5%;
+}
+
+.circle2 {
+    top: -5%;
+    right: -10%;
+}
+
+
+/** Dashboard **/
+
+.dashboard {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+    background: linear-gradient(to right bottom, rgba(var(--glass-color), .7), rgba(var(--glass-color), .3));
+    border-radius: 0 2rem 0 0;
+    padding: 2rem 0rem;
+}
+
+.games {
+    flex: 2;
+}
+
+
+/** Links **/
+
+.link {
+    display: flex;
+    margin: 1rem 0rem;
+    padding: 1rem 5rem;
+}
+
+.link h2 {
+    padding: 0rem 2rem;
+}
+
+.link img {
+    width: 2rem;
+}
+
+.pro {
+    background: #555;
+    padding: 1rem 5rem 1rem 1.2rem;
+    border-radius: 2rem;
+    position: relative;
+}
+
+.pro h3 {
+    color: white;
+}
+
+.pro img {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    top: 0;
+    right: 0;
+    background: #555;
+    ;
+    border-radius: 50%;
+}
+
+
+/** User **/
+
+.user h3 {
+    margin-top: 1rem;
+}
+
+.user img {
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: var(--box-shadow);
+}
+
+
+/** Cards **/
+
+.games {
+    padding: 0rem 4rem;
+    display: flex;
+    height: auto;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.games .status h1 {
+    font-size: 2.6rem;
+    margin-bottom: 2rem;
+}
+
+.card {
+    display: flex;
+    margin-bottom: 2rem;
+}
+
+.card-image {
+    margin-right: 4rem;
+    box-shadow: var(--box-shadow);
+    background: white;
+    border: 4px solid rgba(var(--secondary-color), .2);
+    width: 6rem;
+    height: 6rem;
+    padding: 1rem;
+    border-radius: 3rem;
+}
+
+.card-image img {
+    width: 4rem;
+    height: 4rem;
+}
+
+.card .card-info {
+    flex: 2;
+    background: linear-gradient(to right bottom, rgba(var(--glass-color), .7), rgba(var(--glass-color), .3));
+    padding: 1rem;
+    position: relative;
+    box-shadow: var(--box-shadow);
+}
+
+.card .card-info::before {
+    content: "";
+    height: 100%;
+    width: 2rem;
+    display: block;
+    background: linear-gradient(to right top, rgba(var(--glass-color), .7), rgba(var(--glass-color), .0));
+    left: -2rem;
+    top: 0;
+    border-radius: 1rem 0 0 1rem;
+    position: absolute;
+}
+
+.card .percentage {
+    background: linear-gradient(to left top, rgba(var(--glass-color), .7), rgba(var(--glass-color), .0));
+    border-radius: 0 1rem 1rem 0;
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    position: relative;
+    overflow: hidden;
+    color: #666;
+}
